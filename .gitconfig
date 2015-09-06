@@ -1,0 +1,21 @@
+[user]
+	name = Leandro Guida
+	email = lcguida@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = /home/guida/.gitignore_global
+	editor = vim
+[push]
+	default = simple
+[color]
+	ui = auto
+[alias]
+	lg = log --oneline --decorate --all --graph
+	st = status
+	co = checkout
+	ci = commit -v
+	lr = remote -v
+	bc = branch
+	unstage = reset HEAD
+	uncommit = reset soft HEAD^
+	
