@@ -4,3 +4,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab|retab
 set smarttab
+set background=dark
+let base16colorspace=256
+colorscheme base16-tomorrow
