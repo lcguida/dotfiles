@@ -15,9 +15,13 @@ colorscheme base16-tomorrow
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " Spell Checking
-
 au BufRead,BufNewFile *.md setlocal spell " Enables spell checking for markdown files
 au FileType gitcommit setlocal spell " Enables spell checking for git commits
 
 hi clear SpellBad " Clears the current style
 hi SpellBad cterm=underline,bold ctermbg=red ctermfg=white " Set spell erros styles
+
+" Airline
+set laststatus=2
+set t_Co=256
+let g:airline_theme='luna'
