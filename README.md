@@ -16,5 +16,5 @@ apm list --installed --bare > /path/to/package-list.txt
 Install packages from list:
 
 ```bash
-pm install --packages-file /path/topackage-list.txt
+apm install --packages-file /path/topackage-list.txt
 ```
