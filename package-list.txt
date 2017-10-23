@@ -2,10 +2,12 @@ Sublime-Style-Column-Selection@1.7.4
 alignment@1.1.5
 atom-beautify@0.30.5
 blame@0.12.0
+busy-signal@1.4.3
 color-picker@2.2.5
 expand-selection-to-quotes@0.11.0
 file-icons@2.1.13
 highlight-selected@0.13.1
+intentions@1.1.5
 linter@2.2.0
 linter-jshint@3.1.6
 linter-rubocop@2.2.0
