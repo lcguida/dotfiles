@@ -1,0 +1,100 @@
+"*":
+  "atom-beautify":
+    executables:
+      rubocop:
+        path: "/Users/lguida/.rvm/gems/ruby-2.2.1@rubocop/wrappers/rubocop"
+    general:
+      loggerLevel: "info"
+    ruby: {}
+  "atom-material-ui":
+    colors:
+      abaseColor: "#1a88e0"
+      predefinedColor: "Blue"
+    fonts:
+      fontSize: 15
+    tabs:
+      compactTabs: true
+    ui:
+      panelContrast: true
+  "atom-package-deps":
+    ignored: []
+  "autocomplete-plus":
+    enableAutoActivation: false
+  blame: {}
+  "color-picker":
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "symbols-view"
+      "vim-mode-plus"
+      "minimap"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      ".unison"
+      "CVS"
+      ".AppleDouble"
+      ".LSOverride"
+      ".Spotlight-V100"
+      ".Trashes"
+      "desktop.ini"
+      "*.lock"
+      "*.sock"
+      "*.pid"
+      "*.sw?"
+      ".unison*"
+      "*~"
+    ]
+    packagesWithKeymapsDisabled: []
+    projectHome: "/Users/lguida/Projects"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    warnOnLargeFileLimit: 20
+  editor:
+    invisibles:
+      cr: " "
+      eol: " "
+      tab: "_"
+    preferredLineLength: 120
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "36c04686-00a4-31df-67ff-774a9a68e981"
+  linter: {}
+  "linter-jshint": {}
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+  "linter-ui-default":
+    panelHeight: 99
+  "markdown-preview": {}
+  minimap: {}
+  nitrogen:
+    showWelcomeOnStartup: false
+  "open-terminal-here":
+    command: "open -a $HOME/Applications/iTerm.app \"$PWD\""
+  pigments: {}
+  "ruby-block":
+    highlightLineNumber: true
+  "ruby-test": {}
+  "todo-show":
+    sortBy: "Type"
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+  warnOnLargeFileLimit: 2
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
