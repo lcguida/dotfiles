@@ -10,9 +10,12 @@ set expandtab|retab
 set smarttab
 
 " Color Scheme
-set background=dark
-let base16colorspace=256
-colorscheme base16-tomorrow
+" https://github.com/mhartington/oceanic-next
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+colorscheme OceanicNext
 
 " Syntax Highlights
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
@@ -25,6 +28,8 @@ hi clear SpellBad " Clears the current style
 hi SpellBad cterm=underline,bold ctermbg=red ctermfg=white " Set spell erros styles
 
 " Airline
+" https://github.com/vim-airline/vim-airline
 set laststatus=2
 set t_Co=256
-let g:airline_theme='luna'
+" https://github.com/vim-airline/vim-airline-themes
+let g:airline_theme='oceanicnext'
