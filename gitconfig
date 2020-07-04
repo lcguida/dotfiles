@@ -1,0 +1,25 @@
+[user]
+  name = Leandro Guida
+  email = lcguida@protonmail.com
+[core]
+  autocrlf = input
+  excludesfile = /home/guida/.gitignore_global
+  editor = vim
+[push]
+  default = simple
+[color]
+  ui = auto
+[alias]
+  ls = log --oneline -n 10
+  lg = log --oneline --decorate --all --graph
+  st = status
+  co = checkout
+  ci = commit -v
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD~
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:bold)%(refname:short)\t%(color:red)%(authorname)\t%(color:white)%(color:blue)%(authordate:relative)\" refs/remotes
+
+[protocol]
+  version = 2
+[pull]
+  rebase = false
