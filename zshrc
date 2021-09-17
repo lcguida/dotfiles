@@ -18,3 +18,6 @@ alias open='xdg-open'
 
 # Fix reverse search shortcut
 bindkey "^R" history-incremental-search-backward
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
