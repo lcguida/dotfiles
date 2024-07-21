@@ -1,23 +1,35 @@
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# Intialize ZSH
+source $HOME/.zsh_init.zsh
+
+export EDITOR=vim
+export PATH=$PATH:$HOME/bin
+
+# Load secrets
+if [ -f '$HOME/.secrets' ]; then source $HOME/.secrets; fi
+
+# ZSH Plugin Manager [Antidote]
+source ~/.antidote/antidote.zsh
+antidote load
+
+# Starship
+eval "$(starship init zsh)"
+
+# Mise
+eval "$($HOME/.local/bin/mise activate zsh)"
+
+# Completions
+source <(kubectl completion zsh)
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    source ~/.dotfiles/os/linux.sh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    source ~/.dotfiles/os/macos.sh
 fi
 
-# vim FTW!
-export EDITOR=vim
+# aliases
+alias k="kubectl"
 
-# Add SSH keys to keychain to avoid typing password
-# http://www.qanuq.com/2017/10/09/installer-ssh-keychain/
-eval `keychain --quiet --eval --agents ssh ~/.ssh/id_rsa ~/.ssh/hespul_rsa`
-
-# Use `open`
-alias open='xdg-open'
-
-# p10k Configuration
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# Fix reverse search shortcut
-bindkey "^R" history-incremental-search-backward
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
