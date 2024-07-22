@@ -1,3 +1,35 @@
 [user]
     name = Leandro Guida
-    email = lcguida@protonmail.com
+    email = me@lcguida.com
+[core]
+    autocrlf = input
+    editor = vim
+    # Do not use less like pager if the result is not big enough
+    # https://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html
+    pager = less -iXFR
+[push]
+    default = simple
+    autoSetupRemote = true
+[color]
+    ui = auto
+[alias]
+    ls = log --oneline -n 10
+    lg = log --oneline --decorate --all --graph
+    st = status
+    co = checkout
+    ci = commit -v
+    cb = checkout -b
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD~
+    branches = for-each-ref --sort=-committerdate --format=\"%(color:bold)%(refname:short)\t%(color:red)%(authorname)\t%(color:white)%(color:blue)%(authordate:relative)\" refs/remotes
+    prune-local = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -d"
+    remove-untracked = ! "git status --short | grep '??'| sed -r 's/\\?\\? (.*)/\\1/' | xargs rm -f"
+    b = branch
+    current = rev-parse --abbrev-ref HEAD
+    fix = commit --amend --no-edit
+[protocol]
+    version = 2
+[pull]
+    rebase = false
+[init]
+    defaultBranch = main
