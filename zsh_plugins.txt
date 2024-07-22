@@ -1,3 +1,4 @@
 zsh-users/zsh-completions
 unixorn/fzf-zsh-plugin
 zsh-users/zsh-syntax-highlighting
+jeffreytse/zsh-vi-mode
